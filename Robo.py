@@ -38,8 +38,8 @@ class Robo():
     def clicar(self, x:int, y:int, botao:str ='left'):
         pyautogui.click(x=x, y=y, button=botao)
 
-    def extrair_link(self,x,y,botao:str):
-        self.clicar(x,y,botao)
+    def extrair_link(self,x,y):
+        self.clicar(x,y,botao='right')
         pyautogui.press('up',4)
         pyautogui.press('enter')
 
@@ -54,4 +54,4 @@ if __name__ == "__main__":
     robos.acessar_site('https://sjcelulares.com/')
     robos.clicar(x=1415,y=201)
     robos.aguardar()
-    robos.extrair_link(x=816,y=645,botao='right')
+    robos.extrair_link(x=816,y=645)
